@@ -1,0 +1,15 @@
+GIT: Versionamento de arquivos
+GITHub: Local onde se pode armazenar arquivos versionados (existem outros)
+
+1) Baixar e instalar o git no computador
+2) Criar conta no GitHub: www.github.com
+sandro.livino@gmail.com
+N*********@
+3) Criar primeiro projeto com o git
+a) dentro do diretório do windows explorer: botão direito >> Git Bash Here
+b) no prompt de comando que se abre: git init
+c) observar que dentro do diretório foi criada a pasta .git, que só pode ser vista se marcarmos para exibir itens ocultos
+d) git status: verifica o que já foi commitado e os arquivos que não foram adicionados (ele até dá a dica de usar o git add). Mensagem: "nothing added to commit but untracked files present (use "git add" to track)"
+e) Para adicionar 01 arquivo ao controle de versão: git add "nome_do_arquivo.txt"
+f) Para adicionar N arquivos ao controle de versão: git add .
+g) Arquivos prontos para serem enviados ao controle de versão na nuvem (GitHub). Criar a primeira versão do código com: git commit
