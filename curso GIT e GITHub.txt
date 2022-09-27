@@ -38,7 +38,24 @@ j.2) git status (só para confirmar se foi adicionado)
 j.3) git commit -m "Versão 02...."
 j.4) git push
 
+k) Ver histórico: git reflog
 
+l) Voltar uma versão: git reset --hard [id_da_versao_descoberta_pelo_reflog] NÃO RODAR ESSE COMANDO SEM QUE SEJA EXTREMAMENTE NECESSÁRIO
+
+m)Conceitos de branch (galhos)
+- No trabalho em equipe é importante definir uma branch como estável. Na CAESB chamamos de trunk
+- As outras branches quando finalizadas serão "mergeadas" com a branch estável. Como fazer?
+m.1) Iniciar o repositório numa pasta vazia: git init (verificar pasta oculta .git)
+m.2) Configurar usuário do git remoto (e-mail): git config --global user.email "sandro.livino@gmail.com"
+m.3) Configurar usuário do git remoto (nome): git config --global user.name "Sandro Livino"
+m.4) Fazer o checkout dos arquivos da branch master: git checkout master
+m.5) Criar uma nova branch: git branch staging (qualquer nome que identifique a funcionalidade)
+m.6) Trabalhar no código
+m.7) Adicionar os arquivos alterados: git add .
+m.8) Commitar os arquivos alterados: git commit -m "Versão final do aplicativo"
+m.9) Voltar para a branch principal: git checkout master
+m.10) Baixar as alterações que outros desenv porventura tenham feito na master: git pull
+m.11) Realizar o merge: git merge staging (staging é o nome da branch onde estão as alterações)
 
 
 
