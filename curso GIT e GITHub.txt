@@ -43,8 +43,10 @@ k) Ver histórico: git reflog
 l) Voltar uma versão: git reset --hard [id_da_versao_descoberta_pelo_reflog] NÃO RODAR ESSE COMANDO SEM QUE SEJA EXTREMAMENTE NECESSÁRIO
 
 m)Conceitos de branch (galhos)
+
 - No trabalho em equipe é importante definir uma branch como estável. Na CAESB chamamos de trunk
 - As outras branches quando finalizadas serão "mergeadas" com a branch estável. Como fazer?
+
 m.1) Iniciar o repositório numa pasta vazia: git init (verificar pasta oculta .git)
 m.2) Configurar usuário do git remoto (e-mail): git config --global user.email "sandro.livino@gmail.com"
 m.3) Configurar usuário do git remoto (nome): git config --global user.name "Sandro Livino"
@@ -53,18 +55,25 @@ m.5) Criar uma nova branch: git branch staging (qualquer nome que identifique a 
 m.6) Trabalhar no código
 m.7) Adicionar os arquivos alterados: git add .
 m.8) Commitar os arquivos alterados: git commit -m "Versão final do aplicativo"
-m.9) Voltar para a branch principal: git checkout master
-m.10) Baixar as alterações que outros desenv porventura tenham feito na master: git pull
-m.11) Realizar o merge: git merge staging (staging é o nome da branch onde estão as alterações)
+m.9) Subir as alterações para o repositório:  git push --set-upstream origin staging (SE FOR A PRIMEIRA VEZ, SENÃO, SOMENTE: git push)
+
+====== PRONTO, MINHAS ALTERAÇÕES FORAM SALVAS NO REPOSITÓRIO REMOTO, MAS...... NÃO ESTÃO "MERGEADAS"
+
+m.10) Voltar para a branch principal (BRANCH QUE IRÁ RECEBER AS ATUALIZAÇÕES): git checkout master
+m.11) Baixar as alterações que outros desenv porventura tenham feito na master: git pull (É EXTREMAMENTE NECESSÁRIO, PARA NÃO FAZER MERGE COM UMA VERSÃO DEFASADA DA BRANCH PRINCIPAL)
+m.12) Realizar o merge: git merge staging (staging é o nome da branch onde estão as alterações)
+
+======= PRONTO. AGORA, PARA MANDAR O MERGE PARA O REPOSITÓRIO REMOTO:
+m.13) git push
 
 
+======= OUTROS COMANDOS
+Criar uma branch direto da branch principal: git checkout -b staging2 master (Cria uma branch com todos os arquivos da branch master com o nome staging2, já fazendo o checkout para staging2)
+
+======= PULL REQUEST (VALIDAÇÃO DE PUBLICAÇÃO POR OUTRAS PESSOAS)
+Em alguns casos as alterações precisam ser aprovados por outro desenvolvedor. Nesse caso, antes de subir as alterações é preciso fazer um pull request.
+1) Depois de adicionado, commitado e enviado para o repositório (push)
+Enfim, não achei interessante.... 
 
 
-
-
-
-
-
-
-
-
+FIM!!
