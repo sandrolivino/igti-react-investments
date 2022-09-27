@@ -12,4 +12,38 @@ c) observar que dentro do diretório foi criada a pasta .git, que só pode ser v
 d) git status: verifica o que já foi commitado e os arquivos que não foram adicionados (ele até dá a dica de usar o git add). Mensagem: "nothing added to commit but untracked files present (use "git add" to track)"
 e) Para adicionar 01 arquivo ao controle de versão: git add "nome_do_arquivo.txt"
 f) Para adicionar N arquivos ao controle de versão: git add .
-g) Arquivos prontos para serem enviados ao controle de versão na nuvem (GitHub). Criar a primeira versão do código com: git commit
+g) Arquivos prontos para serem enviados ao controle de versão na nuvem (GitHub). Criar a primeira versão do código com: git commit -m "Versão inicial - trabalho prático (investments) IGTI"
+h) Primeira vez: configurar meu computador com usuário e senha do GitHub:
+git config --global user.email "sandro.livino@gmail.com"
+git config --global user.name "Sandro Livino"
+i) Enviar o commit para o repositório
+i.1) Primeiro devemos criar um repositório no GitHub. Molezinha.
+i.2) Definir para onde o código será enviado com o comando: git remote add origin https://github.com/sandrolivino/igti-react-investments
+i.3) MANDAR (MAS... VAI DAR ERRO)
+git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'
+i.4) Rodar o comando sugerido: git push --set-upstream origin master
+i.5) Autenticar no GitHub (Sign in with your browser)
+i.6) Atualizar o GitHub (F5) para verificar se os arquivos estão todos lá.
+
+j) Publicar esta versão deste arquivo como sendo a v2 do projeto.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
