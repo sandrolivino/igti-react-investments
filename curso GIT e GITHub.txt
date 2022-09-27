@@ -33,6 +33,10 @@ i.5) Autenticar no GitHub (Sign in with your browser)
 i.6) Atualizar o GitHub (F5) para verificar se os arquivos estão todos lá.
 
 j) Publicar esta versão deste arquivo como sendo a v2 do projeto.
+j.1) git add .
+j.2) git status (só para confirmar se foi adicionado)
+j.3) git commit -m "Versão 02...."
+j.4) git push
 
 
 
